@@ -8,14 +8,12 @@ function operation(list1, list2, isUnion) {
         for (var j = 0; j < list2.length && !found; j++) {
             found = item1.userId === list2[j].userId;
         }
-        if (found === !!isUnion) { // isUnion is coerced to boolean
+        if (found === !!isUnion) { //isUnion is coerced to boolean
             result.push(item1);
         }
     }
     return result;
 }
-
-
 // Following functions are to be used:
 function inBoth(list1, list2) {
     return operation(list1, list2, true);
